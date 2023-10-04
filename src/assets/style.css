@@ -6,10 +6,129 @@
   --light-grey: hsl(0, 0%, 86%);
   --smokey-grey: hsl(0, 1%, 44%);
   --off-black: hsl(0, 0%, 8%);
-
+  /* font family */
   --ff-poppins: "Poppins", sans-serif;
 }
 
+* {
+  /* font-size: 32px; */
+}
 body {
-  font-size: 32px;
+  background-color: var(--off-white);
+  font-family: var(--ff-poppins);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+}
+
+.app-calculator-wrapper {
+  min-height: 100vh;
+}
+
+.age-calculator-block {
+  padding: 40px;
+  border-radius: 16px 16px 200px 16px;
+  background-color: var(--white);
+}
+@media screen and (max-width: 576px) {
+  .age-calculator-block {
+    border-radius: 16px 16px 100px 16px;
+  }
+}
+
+.date-column {
+  width: 70%;
+}
+
+@media screen and (max-width: 576px) {
+  .date-column {
+    width: 100%;
+  }
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--smokey-grey);
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 576px) {
+  label {
+    font-size: 16px;
+  }
+}
+
+.form-control,
+.form-control:focus {
+  font-size: 28px;
+  border: 1px solid var(--off-black);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+  .form-control,
+  .form-control:focus {
+    font-size: 18px;
+  }
+}
+
+.line-and-arrow {
+  border-bottom: 1px solid var(--light-grey);
+  margin: 50px 0;
+  position: relative;
+  width: 96%;
+}
+
+@media screen and (max-width: 576px) {
+  .line-and-arrow {
+    margin: 70px 0;
+  }
+}
+
+.arrow-wrapper {
+  background-color: var(--purple);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 100%;
+  position: absolute;
+  /* right: 0; */
+  left: 100%;
+  transform: translate(-100%);
+  top: -50px;
+}
+
+@media screen and (max-width: 576px) {
+  .arrow-wrapper {
+    left: 50%;
+    transform: translate(-50%);
+    top: -50px;
+  }
+}
+
+.years > p,
+.months > p,
+.days > p {
+  font-size: 74px;
+  font-weight: 800;
+  color: var(--off-black);
+  line-height: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .years > p,
+  .months > p,
+  .days > p {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--off-black);
+    line-height: 1;
+  }
+}
+
+.figure {
+  color: var(--purple);
+  letter-spacing: 3px;
 }
